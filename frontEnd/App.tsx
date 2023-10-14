@@ -1,28 +1,21 @@
 import React from "react";
-
 import { View, Text, StyleSheet } from "react-native";
+import CounterPage from "./src/pages/counterPage";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import LoginPage from "./src/pages/LoginPage";
 
+const stack = createStackNavigator();
 
 const App = () => {
   return (
-    
-    <View style={styles.mainContainer}>
-      <Text style={styles.textContainer}>Lab Day 04</Text>
-    </View>
+    <NavigationContainer>
+      <stack.Navigator>
+        <stack.Screen name="Counter" component={CounterPage} />
+        <stack.Screen name="Login" component={LoginPage} />
+      </stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  textContainer: {
-    fontWeight: "700",
-    fontFamily: "Arial",
-    fontSize: 16,
-  },
-});
 
 export default App;
