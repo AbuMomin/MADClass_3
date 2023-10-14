@@ -9,10 +9,7 @@ const App = () => {
     // view == div
     // These tags are case-sensitive
     <View style={styles.mainContainer}>
-      <Text style={styles.textContainer}>Hello World !!!</Text>
-      <Text style={styles.textContainer}>
-        TO save All the the files together.. Cmd + K --- S
-      </Text>
+      <Text style={styles.textContainer}>Lab Day 04</Text>
     </View>
 
     // Can not write another sibling component
