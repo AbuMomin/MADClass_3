@@ -24,7 +24,7 @@ yarn expo start
 yarn add
 ```
 
-## Development Steps
+# Development Steps
 
 1. Store all your components on `src/pages` folder
 2. Do not forget to export the component you have designed 
@@ -41,9 +41,22 @@ export default ComponentName
 
 4. Add React NAVIGATION
 
-```bash
+```zsh
 yarn add @react-navigation/native
 yarn add @react-navigation/stack
 yarn add react-native-safe-area-view
 ```
+5. Import the component on `App.tsx`
 
+```typescript
+import ComponentName from "Component_PATH";
+// import LoginPage from "./src/pages/LoginPage";
+```
+
+# Takeaways
+
+- React Virtual DOM
+- React State
+- React Hook
+- React Navigator
+- React Action Handler
