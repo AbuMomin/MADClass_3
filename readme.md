@@ -23,3 +23,10 @@ yarn expo start
 ```bash 
 yarn add
 ```
+
+# Takeaways
+
+- gitignore
+- Expo 
+- React-native components
+- CSS styling
