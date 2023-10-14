@@ -1,19 +1,14 @@
 import React from "react";
+
 import { View, Text, StyleSheet } from "react-native";
 
-// Can not write JSX within a function without returning it.
-// A single function can not return more than one JSX element
-// function App(){}
+
 const App = () => {
   return (
-    // view == div
-    // These tags are case-sensitive
+    
     <View style={styles.mainContainer}>
       <Text style={styles.textContainer}>Lab Day 04</Text>
     </View>
-
-    // Can not write another sibling component
-    // ! <view></view>
   );
 };
 
