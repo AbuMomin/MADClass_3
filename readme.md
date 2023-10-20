@@ -19,11 +19,14 @@ yarn expo start
 
 ## Clone and Run
 - Clone
-- Run 
+- Install 
 ```bash 
 yarn add
 ```
-
+- Run
+```bash 
+yarn expo start
+```
 # Takeaways
 
 - gitignore
