@@ -19,9 +19,13 @@ yarn expo start
 
 ## Clone and Run
 - Clone
-- Run 
+- Install
 ```bash 
 yarn add
+```
+- Run
+```bash 
+yarn expo start
 ```
 
 # Development Steps
@@ -42,9 +46,10 @@ export default ComponentName
 4. Add React NAVIGATION
 
 ```zsh
-yarn add @react-navigation/native
-yarn add @react-navigation/stack
-yarn add react-native-safe-area-view
+yarn add @react-navigation/native --save
+yarn add @react-navigation/stack --save
+yarn add react-native-safe-area-view react-native-safe-area-context --save
+npm i react-native-gesture-handler --save
 ```
 5. Import the component on `App.tsx`
 
