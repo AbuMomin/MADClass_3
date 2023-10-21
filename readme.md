@@ -50,6 +50,7 @@ yarn add @react-navigation/native --save
 yarn add @react-navigation/stack --save
 yarn add react-native-safe-area-view react-native-safe-area-context --save
 npm i react-native-gesture-handler --save
+npm install @react-navigation/bottom-tabs --save
 ```
 5. Import the component on `App.tsx`
 
@@ -60,8 +61,4 @@ import ComponentName from "Component_PATH";
 
 # Takeaways
 
-- React Virtual DOM
-- React State
-- React Hook
-- React Navigator
-- React Action Handler
+- Tab Navigation
