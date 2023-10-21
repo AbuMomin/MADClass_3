@@ -68,3 +68,5 @@ npm install axios
 # Takeaways
 
 - Tab Navigation
+- API
+- axios
