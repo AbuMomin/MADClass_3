@@ -59,6 +59,12 @@ import ComponentName from "Component_PATH";
 // import LoginPage from "./src/pages/LoginPage";
 ```
 
+6. Install to Call public API
+
+```
+npm install axios
+```
+
 # Takeaways
 
 - Tab Navigation
