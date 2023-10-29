@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet, Image } from "react-native";
 
 // THese are functional component , We are not using Class Component here
 const CounterPage = (props: any) => {
@@ -27,11 +27,15 @@ const CounterPage = (props: any) => {
   return (
     // Shift + Enter --> to auto import
     <View style={style.mainCointainer}>
+      <Image
+        style={style.imgStyle}
+        source={require("../../assets/react.png")}
+      />
       <Text style={style.counterContainer}>{counter}</Text>
-      <View>
+      <View style={style.buttonContainer}>
         <Button title="Increase" onPress={increaseHandler}></Button>
-        <Button title="Decrease" onPress={decreaseHandler}></Button>
-        <Button title="Restart" onPress={restartHandler}></Button>
+        <Button title="Decrease" onPress={decreaseHandler} />
+        <Button title="Restart" onPress={restartHandler} />
       </View>
       <View>
         <Button title="LOGIN" onPress={navHandler} />
@@ -43,6 +47,7 @@ const CounterPage = (props: any) => {
 const style = StyleSheet.create({
   mainCointainer: {
     flex: 1,
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -50,6 +55,14 @@ const style = StyleSheet.create({
     fontSize: 80,
     fontWeight: "700",
     color: "red",
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  imgStyle: {
+    height: 100,
+    width: 100,
   },
 });
 
