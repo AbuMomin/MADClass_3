@@ -20,6 +20,7 @@ const CounterPage = (props: any) => {
     console.log(`Current Value: ${counter}`);
   };
 
+  // navigate to page_name --> "Login" --> at App.tsx
   const navHandler = () => {
     props.navigation.navigate("Login");
   };

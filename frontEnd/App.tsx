@@ -10,28 +10,27 @@ import NationalizePage from "./src/pages/NationalizePage";
 
 const stack = createStackNavigator();
 
-const bottom_tab = createBottomTabNavigator();
+const BasicDashboardScreen = () => {
+  return (
+    <stack.Navigator screenOptions={{ headerShown: false }}>
+      <stack.Screen name="Counter" component={CounterPage} />
+      <stack.Screen name="Login" component={LoginPage} />
+    </stack.Navigator>
+  );
+};
 
-const BasicDashboardScreen = () =>{
-  return(
-  <stack.Navigator screenOptions={{headerShown: false}}>
-        <stack.Screen name="Counter" component={CounterPage} />
-        <stack.Screen name="Login" component={LoginPage} />
-</stack.Navigator>
-  )
-}
+const bottom_tab = createBottomTabNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
       <bottom_tab.Navigator>
-        <bottom_tab.Screen name="Dashboard" component = {BasicDashboardScreen}/>
-        <bottom_tab.Screen name="Settings" component = {SettingsPage}/>
-        <bottom_tab.Screen name="Nationalize" component = {NationalizePage}/>
+        <bottom_tab.Screen name="Dashboard" component={BasicDashboardScreen} />
+        <bottom_tab.Screen name="Settings" component={SettingsPage} />
+        <bottom_tab.Screen name="Nationalize" component={NationalizePage} />
       </bottom_tab.Navigator>
     </NavigationContainer>
   );
 };
 
 export default App;
-
