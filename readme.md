@@ -66,9 +66,7 @@ npm install --save @nestjs/swagger
 <!-- import {ApiProperty} in DTO -->
 ```
 
--
-
----
+- ***
 
 # FrontEND
 
@@ -148,6 +146,8 @@ npm install axios
 
 (Has ERROR in code)
 
-- Login
-- Conditional Rendering
-- Context-Provider
+- NestJS structure
+- controller, service, module.
+- HTTP request and response
+- API testing using Postman
+- DTO
