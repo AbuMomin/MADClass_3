@@ -144,8 +144,6 @@ npm install axios
 
 # Takeaways
 
-(Has ERROR in code)
-
 - NestJS structure
 - controller, service, module.
 - HTTP request and response
