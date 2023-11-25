@@ -5,7 +5,74 @@
 1. JavaScript and TypeScript Nightly
 2. ESLint
 
-# Initializing Steps
+---
+
+# BackEND
+
+## Initializing Steps
+
+- Nest.JS installation
+
+```bash
+npm install -g @nestjs/cli
+#  check version
+nest --version
+```
+
+- Create nest Project
+
+```bash
+nest new <ProjectName>
+```
+
+## Clone and Run
+
+- Clone
+- Install
+
+```bash
+npm install
+```
+
+- Run
+
+```bash
+npm run start
+# dev mode (auto reload)
+npm run start:dev
+```
+
+## Development Steps
+
+1. Create Module, Controller, Service
+
+```nest
+nest generate module <Name>
+nest generate controller <Name>
+nest generate service <Name>
+```
+
+2. Installation
+
+- Swagger
+
+```
+<!-- Swagger Documentation -->
+npm install --save @nestjs/swagger
+```
+
+```
+<!-- Add swagger code on `main.ts` -->
+<!-- import {ApiProperty} in DTO -->
+```
+
+-
+
+---
+
+# FrontEND
+
+## Initializing Steps
 
 - Install React_Native && Expo together
 
@@ -37,7 +104,7 @@ yarn
 yarn expo start
 ```
 
-# Development Steps
+## Development Steps
 
 1. Store all your components on `src/pages` folder
 2. Do not forget to export the component you have designed
@@ -75,8 +142,12 @@ import ComponentName from "Component_PATH";
 npm install axios
 ```
 
+---
+
 # Takeaways
 
-- Tab Navigation
-- API
-- axios
+(Has ERROR in code)
+
+- Login
+- Conditional Rendering
+- Context-Provider
