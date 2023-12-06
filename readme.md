@@ -54,7 +54,7 @@ nest generate service <Name>
 
 2. Installation
 
-- Swagger
+- Swagger API Documentation
 
 ```
 <!-- Swagger Documentation -->
@@ -66,7 +66,7 @@ npm install --save @nestjs/swagger
 <!-- import {ApiProperty} in DTO -->
 ```
 
-- ***
+---
 
 # FrontEND
 
@@ -143,6 +143,8 @@ npm install axios
 ---
 
 # Takeaways
+
+(Has ERROR in code)
 
 - NestJS structure
 - controller, service, module.
