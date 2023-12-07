@@ -227,10 +227,11 @@ yarn add expo-dev-client --save
 
 # Takeaways
 
-(Has ERROR in code)
-
-- NestJS structure
-- controller, service, module.
-- HTTP request and response
-- API testing using Postman
-- DTO
+- Database Connection
+- DataGrip
+- Database Migration
+- ORM: TypeORM
+- Models Creation
+- Manipulating Database through API using Postman, and Swagger
+- Learnt using config, Repository, class-validator
+- NestJS framework control-flow structure
