@@ -16,7 +16,7 @@ export class UserCredDTO {
     name: 'password',
     description: "User's Password",
     type: String,
-    example: 'sdsadsadas21321sd',
+    example: '1234',
   })
   readonly password: string;
 }

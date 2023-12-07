@@ -9,6 +9,8 @@
 
 # BackEND
 
+**Ref: [Nest.js Documentation](https://docs.nestjs.com/)**
+
 ## Initializing Steps
 
 - Nest.JS installation
@@ -56,17 +58,79 @@ nest generate service <Name>
 
 - Swagger API Documentation
 
-```
-<!-- Swagger Documentation -->
-npm install --save @nestjs/swagger
-```
+  ```
+  <!-- Swagger Documentation -->
+  npm install --save @nestjs/swagger
+  ```
+
+  ```
+  <!-- Add swagger code on `main.ts` -->
+  <!-- import {ApiProperty} in DTO -->
+  ```
+
+  ```
+  localhost:<PORT>/docs  <!-- Swagger view-->
+  ```
+
+- Class/Input Validator on DTO (Post Request)
+
+  ```
+   npm i --save class-validator
+  ```
+
+## Database
+
+**Ref: [Nest.js Database](https://docs.nestjs.com/techniques/database)**
+
+0.  Install PostgreSQL as per documentation Online (Note the Database User, Password, PORT)
+
+1.  DB necessary Installation
 
 ```
-<!-- Add swagger code on `main.ts` -->
-<!-- import {ApiProperty} in DTO -->
+yarn add --save @nestjs/typeorm typeorm      <!-- TypeORM -->
+yarn add --save @nestjs/config      <!-- Config -->
+yarn add --save pg          <!-- Postgres Client -->
+yarn add dotenv         <!-- Config alternative for `.env` file-->
 ```
 
----
+2.  **DataGrip** Setup
+
+    - Open project / Clone from Git
+    - Press `+` button > `Data Source` > Add a Database
+    - Configure the database using User,Password,PORT
+    - Test connection before `Apply`
+
+3.  DB Migration
+
+**Sync Database among contributors**
+
+- Installation
+
+  ```
+  yarn add db-migrate-pg
+  ```
+
+- Create a file named `.db-migraterc`
+
+      {
+      "sql-file": true,
+      "configFile": "./migrations/database.json"
+      }
+
+- Create a folder name `migrations`, create a file `database.json` --> check project for code
+
+- Migration Commands
+
+  ```
+  npx db-migrate create init-<Table_NAME>
+
+  <!-- After pulling from git -->
+  npx db-migrate down
+  npx db-migrate up
+
+  ```
+
+- ***
 
 # FrontEND
 
@@ -139,6 +203,25 @@ import ComponentName from "Component_PATH";
 ```
 npm install axios
 ```
+
+7. For Simulator
+
+```
+yarn add expo-dev-client --save
+```
+
+## Simulators and Expo-mobile-app
+
+1. Expo Mobile App
+
+   - Install expo go from App Store.
+   - Run `yarn expo start`
+   - Scan the QR code from VS-Code terminal.
+   - Run your application on Expo Mobile App.
+
+2. [Run Android Simulator](https://www.youtube.com/watch?v=WKGGQVSUoqA)
+
+3. [Run iOS Simulator](https://www.youtube.com/watch?v=Ws-wnDywtMI)
 
 ---
 

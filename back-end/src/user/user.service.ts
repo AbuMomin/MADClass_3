@@ -1,5 +1,10 @@
-import { Injectable } from '@nestjs/common';
 import { UserCredDTO } from './dto/user.dto';
+import { UserAddCredDTO } from './dto/userAdd.dto';
+import { User } from 'models/users.model';
+// What are these ????
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 // Contains all the business Logic of the application
 // Controller gets data from Service
@@ -7,21 +12,10 @@ import { UserCredDTO } from './dto/user.dto';
 
 @Injectable()
 export class UserService {
-  // users object array
-  private users = [
-    { name: 'Abu Saleh', email: 'win@gmail.com', role: 'Student', age: 26 },
-    { name: 'Enan Israq', email: 'enan@gmail.com', role: 'Student', age: 21 },
-    {
-      name: 'Shammi Afrin',
-      email: 'shammi@gmail.com',
-      role: 'Teacher',
-      age: 28,
-    },
-  ];
-
-  getUser(emailProvided: string) {
-    return this.users.find((user) => user.email === emailProvided);
-  }
+  // InjectRepository refers/matches the model with the Database Table
+  constructor(
+    @InjectRepository(User) private userRepository: Repository<User>,
+  ) {}
 
   userAuth(userCreadential: UserCredDTO): boolean {
     if (
@@ -32,5 +26,10 @@ export class UserService {
     } else {
       return false;
     }
+  }
+
+  async addUser(userAddCredential: UserAddCredDTO): Promise<User> {
+    const newUser = this.userRepository.create(userAddCredential);
+    return this.userRepository.save(newUser);
   }
 }

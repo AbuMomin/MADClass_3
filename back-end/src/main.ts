@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+// for Swagger
 import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
@@ -21,6 +22,7 @@ class APIDocument {
 }
 
 async function bootstrap() {
+  // cors: get request from other domain/schema/port using HTTP-header based mechanism
   const app = await NestFactory.create(AppModule, { cors: true });
   // For Swagger
   APIDocument.setup(app);
