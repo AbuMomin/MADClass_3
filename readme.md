@@ -130,7 +130,7 @@ yarn add dotenv         <!-- Config alternative for `.env` file-->
 
   ```
 
-- ***
+---
 
 # FrontEND
 
